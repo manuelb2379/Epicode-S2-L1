@@ -25,12 +25,22 @@ console.log(`Ciao, mi chiamo ${NOME} ${COGNOME}`);
 let a = 10;
 let b = 3;
 
+//gli esercizi così non portano a video la richiesta ma solo il risultato
 console.log(10 + 3);
 console.log(10 - 3);
 console.log(10 * 3);
 console.log(10 / 3);
 console.log(10 % 3);
 console.log(10 ** 3);
+
+
+//correzione
+console.log(`${a} + ${b} = ${a + b}`);
+console.log(`${a} - ${b} = ${a - b}`);
+console.log(`${a} * ${b} = ${a * b}`);
+console.log(`${a} / ${b} = ${a / b}`);
+console.log(`${a} % ${b} = ${a % b}`);
+console.log(`${a} ** ${b} = ${a ** b}`);
 
 
 /* SCRIVI QUI LA TUA RISPOSTA */
@@ -49,6 +59,15 @@ console.log(`La tua età attale è ${etaAttuale}`);
 console.log(`Tra 10 anni avrai ${etaAttuale + 10}`);
 console.log(`Tra 5 anni avrai ${etaAttuale + 5}`);
 
+//correzione
+console.log(`età oggi ${annoCorrente - annoNascita}`);
+console.log(`Tra 10 anni avrai ${(annoCorrente - annoNascita) + 10 }`);
+console.log(`Tra 5 anni avrai ${(annoCorrente - annoNascita) + 5 }`);
+/*Questo metodo è migliore in quanto creando una variabile in meno
+si alleggerisce il carico visto che come si è detto le variabili occupano memoria e quando possibile
+è sempre meglio, se la variabile serve in un punto solo, occupare meno memoria possibile 
+non è un errore ma uno strumento di ottimizzazione della memoria*/
+
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
@@ -57,10 +76,20 @@ console.log(`Tra 5 anni avrai ${etaAttuale + 5}`);
    Calcola "maggiorenne" come "eta >= 18".
    Stampa: "Età: 25 — Maggiorenne: true"
 */
-let eta = 25;
-const maggiorenne = eta >= 18;
 
-console.log(`Età ${eta = 25} - Maggiorennte: ${maggiorenne}`)
+/*let eta = 25;
+let maggiorenne = eta >= 18;
+
+console.log(`Età: ${eta = 25} - Maggiorennte: ${maggiorenne}`)*/
+
+/*correzione la richiesta era di scrivere una variabile senza valore fisso, questo ci prepara ad 
+un valore dinamico che ci verrà inserito dall'user sul sito per la compilazione di qualcosa ad esempio
+ed in questo modo si riesce a controllare che l'utente sia maggiorenne*/
+let eta;
+eta = 25
+let maggiorenne = eta >= 18;
+
+console.log(`Età: ${eta = 25} - Maggiorennte: ${maggiorenne}`)
 
 
 /* SCRIVI QUI LA TUA RISPOSTA */
@@ -70,19 +99,19 @@ console.log(`Età ${eta = 25} - Maggiorennte: ${maggiorenne}`)
    Stampa per ognuna: "nome è di tipo: string" usando typeof.
    In commento sopra la variabile null: spiega cosa ritorna typeof null e perché.
 */
-let nome = 'Manuel';
-let anni = 29;
-let attivo = true;
-let c = null;
-let d;
+let myString = 'Manuel';
+let myNumber = 29;
+let myBoolean = true;
+let myNull = null;
+let myUndefined;
 
-console.log(typeof nome);
-console.log(typeof anni);
-console.log(typeof attivo);
+console.log(`La variabile ${myString} e di tipo ${typeof myString}`);
+console.log(`La variabile ${myNumber} e di tipo ${typeof myNumber}`);
+console.log(`La variabile ${myBoolean} e di tipo ${typeof myBoolean}`);
 /*ritorna null o in questo caso object nella console in quanto abbiamo attributo alla variabile 'c' il valore di null, se non lo 
 avessi fatto avremmo ottenuto undefined come nella linea successiva, null in questo caso è il valore attriubito alla variabile*/
-console.log(typeof c);
-console.log(typeof d);
+console.log(`La variabile ${myNull} e di tipo ${typeof myNull}`);
+console.log(`La variabile ${myUndefined} e di tipo ${typeof myUndefined}`);
 
 
 /* SCRIVI QUI LA TUA RISPOSTA */
@@ -94,14 +123,17 @@ console.log(typeof d);
    In commento, una riga: spiega la differenza.
 */
 
-let numero = 5
-let stringa = '5'
+let numero = 5;
+let stringa = '5';
 
 console.log(numero == stringa);
 console.log(numero === stringa);
 /*i due risultati sono true per Equality e false per la Strict Equality in quanto, nel primo caso anche se il tipo è diverso il valore è uguale,
 nel secondo caso essendo solo 1 delle due condizioni vera (come detto prima il valore ma non il tipo) il risultato è false*/
 
+//correzione
+console.log(`numero == stringa? ${numero == stringa}`);
+console.log(`numero === stringa? ${numero === stringa}`);
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
@@ -136,6 +168,7 @@ console.log('10' * '2');
    "n è divisibile per 3: true/false"
    "n è pari E divisibile per 3: true/false"
 */
+/* SEMPRE IL PROBLEMA DI PRIMA CON L'ETÀ
 let n = 15;
 const PARI = n % 2 === 0;
 const DIVISIBILE = n % 3 === 0;
@@ -143,7 +176,14 @@ const ENTRAMBE = PARI && DIVISIBILE;
 
 console.log(`${n} è pari: ${PARI}`);
 console.log(`${n} è divisibile per 3: ${DIVISIBILE}`);
-console.log(`${n} è pari e divisibile per 3: ${ENTRAMBE}`);
+console.log(`${n} è pari e divisibile per 3: ${ENTRAMBE}`);*/
+
+//correzione
+let n;
+n = 20
+console.log(`n è pari: ${n % 2 ===0}`)
+console.log(`n è divisibile per 3: ${n % 3 ===0}`)
+console.log(`n è pari e divisibile per 3: ${n % 2 ===0 && n % 3 ===0 }`)
 
 
 /* SCRIVI QUI LA TUA RISPOSTA */
