@@ -194,9 +194,21 @@ console.log(`n è pari e divisibile per 3: ${n % 2 ===0 && n % 3 ===0 }`)
    Determina il tipo: "equilatero", "isoscele", "scaleno".
    Stampa: "Triangolo isoscele, perimetro 15"
 */
-const e = 6 ;
-const f = 6 ;
-const g = 3 ;
-
-
 /* SCRIVI QUI LA TUA RISPOSTA */
+const e = 12 ;
+const f = 15 ;
+const g = 12 ;
+
+let perimetro = e + f+ g;
+let tipo;
+
+if (e === f && f === g) {
+   tipo = 'equilatero';
+   console.log(`Triangolo ${tipo}, perimetro ${perimetro}`);
+} else if (e === f || f === g || g === e) {
+   tipo = 'isoscele';
+   console.log(`Triangolo ${tipo}, perimetro ${perimetro}`);
+} else {
+   tipo = 'scaleno';
+   console.log(`Triangolo ${tipo}, perimetro ${perimetro}`);
+}
